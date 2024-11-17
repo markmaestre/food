@@ -1,0 +1,112 @@
+/* Modal Container */
+#orderModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background: white;
+    width: 400px;
+    padding: 25px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Modal Title */
+#orderModal h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #222;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Form Styling */
+form#orderForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Form Group */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+#orderModal label {
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 5px;
+    font-size: 1em;
+}
+
+#orderModal input,
+#orderModal select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #555;
+    box-sizing: border-box;
+}
+
+/* Buttons Container */
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.modal-button {
+    width: 48%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+}
+
+.modal-button.confirm {
+    background-color: #4caf50;
+    color: white;
+}
+
+.modal-button.confirm:hover {
+    background-color: #45a049;
+}
+
+.modal-button.cancel {
+    background-color: #f44336;
+    color: white;
+}
+
+.modal-button.cancel:hover {
+    background-color: #e53935;
+}
+
+/* Adjustments for Smaller Screens */
+@media (max-width: 500px) {
+    #orderModal {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .modal-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .modal-button {
+        width: 100%;
+    }
+}
